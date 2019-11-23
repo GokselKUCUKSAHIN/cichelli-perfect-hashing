@@ -1,0 +1,7 @@
+C:\ERU\Güz\Dosya Organizasyon Teknikleri\Cichelli\Cichelli\bin\Debug\Cichelli.exe.config
+C:\ERU\Güz\Dosya Organizasyon Teknikleri\Cichelli\Cichelli\bin\Debug\Cichelli.exe
+C:\ERU\Güz\Dosya Organizasyon Teknikleri\Cichelli\Cichelli\bin\Debug\Cichelli.pdb
+C:\ERU\Güz\Dosya Organizasyon Teknikleri\Cichelli\Cichelli\obj\Debug\Cichelli.csprojAssemblyReference.cache
+C:\ERU\Güz\Dosya Organizasyon Teknikleri\Cichelli\Cichelli\obj\Debug\Cichelli.csproj.CoreCompileInputs.cache
+C:\ERU\Güz\Dosya Organizasyon Teknikleri\Cichelli\Cichelli\obj\Debug\Cichelli.exe
+C:\ERU\Güz\Dosya Organizasyon Teknikleri\Cichelli\Cichelli\obj\Debug\Cichelli.pdb
