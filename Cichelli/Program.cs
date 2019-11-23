@@ -12,12 +12,13 @@ namespace Cichelli
         {
             //new Cichelli
 
-            string jellyebanci =  "GOKSEL KUCUKSAHIN ARDA FAGGOT THICC BOI ANAKIN DVANKVALKER XD MADA FAKA";
+            string jellyebanci =  "GOKSELKUCUKSAHINARDAFAGGOTTHICCBOIANAKINDVANKVALKERXDMADAFAKA";
             foreach (var item in jellyebanci)
             {
                 new Cichelli(item);
             }
-            Cichelli.InsertionSort();
+            //Cichelli.InsertionSort();
+            Cichelli.SelectionSort();
             foreach (var item in Cichelli.list)
             {
                 Console.WriteLine(item.ToString());

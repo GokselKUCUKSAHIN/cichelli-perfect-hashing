@@ -66,16 +66,41 @@ namespace Cichelli
         public static void InsertionSort()
         {
             // Insertion Sort
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                for (int j = i + 1; j > 0; j--)
+                {
+                    if (list[j - 1].occurrences > list[i].occurrences)
+                    {
+                        Cichelli temp = list[j - 1];
+                        list[j - 1] = list[j];
+                        list[j] = temp;
+                    }
+                }
+            }
+        }
+
+        public static void SelectionSort()
+        {
+            // Selection Sort
+            int min = -1;
             for (int i = 0; i < list.Count; i++)
             {
-                for (int j = i; j > 0; j--)
+                min = list[i].occurrences;
+                int index = -1;
+                for (int j = i + 1; j < list.Count; j++)
                 {
-                    if (list[j].occurrences < list[i].occurrences)
+                    if(list[j].occurrences < min)
                     {
-                        Cichelli temp = list[j];
-                        list[j] = list[i];
-                        list[i] = temp;
+                        min = list[j].occurrences;
+                        index = j;
                     }
+                }
+                if(index != -1)
+                {
+                    Cichelli temp = list[index];
+                    list[index] = list[i];
+                    list[i] = temp;
                 }
             }
         }
