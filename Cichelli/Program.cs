@@ -10,7 +10,7 @@ namespace Cichelli
     {
         //static string[] words = { "CALLIOPE", "CLIO", "ERATO", "EUTERPE", "MELPOMENE", "POLYHYMNIA", "TERPSICHORE", "THALIA", "URANIA" };
         //static string[] words = { "KAAN", "GOKSEL", "MEHMET", "ARDA", "KONTRA", "ATAK", "MADA" };
-        static string[] words = { "GNAT", "RAT", "CAT", "ANT", "DOG", "CHIMP", "TOAD" };
+        static string[] words = { "GNAT", "RAT", "CAT", "ANT", "DOG", "CHIMP", "TOAD", "HORSE", "ELEPHANT", "FISH" };
         //static string[] words = { "ARDA","BERKE", "EMRE", "FURKAN", "GOKSEL","ARKADASLAR","CATISIN"};
         static string[] placed = new string[words.Length];
 
@@ -35,16 +35,16 @@ namespace Cichelli
                 }
                 else
                 {
-                    Cichelli.list[Cichelli.list.Count-1].gValue++;
-                    for (int j = Cichelli.list.Count-1; j >= 0; j--)
+                    Cichelli.list[Cichelli.list.Count - 1].gValue++;
+                    for (int j = Cichelli.list.Count - 1; j >= 0; j--)
                     {
-                        if(Cichelli.list[j].gValue > 4)
+                        if (Cichelli.list[j].gValue > Cichelli.MAX_G_VALUE)
                         {
                             Cichelli.list[j].gValue = 0;
-                            if(j > 0)
+                            if (j > 0)
                             {
                                 Cichelli.list[j - 1].gValue++;
-                                if(Cichelli.list[0].gValue == 4)
+                                if (Cichelli.list[0].gValue == Cichelli.MAX_G_VALUE)
                                 {
                                     break;
                                 }
@@ -60,7 +60,6 @@ namespace Cichelli
             Console.WriteLine("DONE!!!");
             Console.ReadKey();
         }
-
         static void ClearPlaced()
         {
             for (int i = 0; i < placed.Length; i++)
