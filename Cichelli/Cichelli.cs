@@ -54,6 +54,59 @@ namespace Cichelli
             return list[FindCichelli(letter)].gValue;
         }
 
+        public static void ClearGValues(int index)
+        {
+            for (int i = index; i < list.Count; i++)
+            {
+                list[i].gValue = 0;
+            }
+        }
+
+        public static int GetOccurrence(char letter)
+        {
+            return list[FindCichelli(letter)].occurrences;
+        }
+
+        public static int FirstLetterOccurrence(string word)
+        {
+            return GetOccurrence(GetFirstLetter(word));
+        }
+
+        public static int LastLetterOccurrence(string word)
+        {
+            return GetOccurrence(GetLastLetter(word));
+        }
+
+        public static bool IncreaseFirstLetterG(string word)
+        {
+            char letter = GetFirstLetter(word);
+            int index = FindCichelli(letter);
+            if (list[index].gValue < 4)
+            {
+                list[index].gValue++;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool IncreaseLastLetterG(string word)
+        {
+            char letter = GetLastLetter(word);
+            int index = FindCichelli(letter);
+            if (list[index].gValue < 4)
+            {
+                list[index].gValue++;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public static char GetFirstLetter(string word)
         {
             if (word != String.Empty)
