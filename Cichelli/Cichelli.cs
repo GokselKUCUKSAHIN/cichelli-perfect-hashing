@@ -14,7 +14,7 @@ namespace Cichelli
         public char letter;         // body of cichelli
         public int gValue = 0;      // default value
         public int occurrences = 1; // default value
-        //
+                                    //
 
         public Cichelli(char letter)
         {
@@ -36,10 +36,25 @@ namespace Cichelli
             }
         }
 
+
         //
         // STATIC
         //
-        private static char GetFirstLetter(string word)
+
+        public static int h(string word)
+        {
+            int size = word.Length;
+            int fLetter = g(GetFirstLetter(word));
+            int lLatter = g(GetLastLetter(word));
+            return size + fLetter + lLatter;
+        }
+
+        private static int g(char letter)
+        {
+            return list[FindCichelli(letter)].gValue;
+        }
+
+        public static char GetFirstLetter(string word)
         {
             if (word != String.Empty)
             {
@@ -51,7 +66,7 @@ namespace Cichelli
             }
         }
 
-        private static char GetLastLetter(string word)
+        public static char GetLastLetter(string word)
         {
             if (word != String.Empty)
             {
@@ -61,6 +76,11 @@ namespace Cichelli
             {
                 return '~';
             }
+        }
+
+        public static int Mod(int number, int mod)
+        {
+            return number % mod;
         }
 
         public static void InsertionSort()
@@ -90,13 +110,13 @@ namespace Cichelli
                 int index = -1;
                 for (int j = i + 1; j < list.Count; j++)
                 {
-                    if(list[j].occurrences < min)
+                    if (list[j].occurrences > min)
                     {
                         min = list[j].occurrences;
                         index = j;
                     }
                 }
-                if(index != -1)
+                if (index != -1)
                 {
                     Cichelli temp = list[index];
                     list[index] = list[i];
@@ -113,7 +133,7 @@ namespace Cichelli
                 Cichelli temp = list[i];
                 if (temp.letter.Equals(letter))
                 {
-                    // Founded
+                    // Found
                     return i;
                 }
             }
