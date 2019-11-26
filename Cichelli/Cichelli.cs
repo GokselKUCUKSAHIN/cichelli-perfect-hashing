@@ -49,7 +49,7 @@ namespace Cichelli
             return size + fLetter + lLatter;
         }
 
-        private static int g(char letter)
+        public static int g(char letter)
         {
             return list[FindCichelli(letter)].gValue;
         }
