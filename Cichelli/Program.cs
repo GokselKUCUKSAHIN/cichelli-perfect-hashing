@@ -9,10 +9,8 @@ namespace Cichelli
     class Program
     {
         //static string[] words = { "CALLIOPE", "CLIO", "ERATO", "EUTERPE", "MELPOMENE", "POLYHYMNIA", "TERPSICHORE", "THALIA", "URANIA" };
-        //static string[] words = { "KAAN", "GOKSEL", "MEHMET", "ARDA", "KONTRA", "ATAK", "MADA" };
         //static string[] words = { "GNAT", "RAT", "CAT", "ANT", "DOG", "CHIMP", "TOAD" };// , "HORSE", "ELEPHANT", "FISH" ,"RABBIT"};
         static string[] words = { "GNAT", "RAT", "CAT", "ANT", "DOG", "CHIMP", "TOAD", "HORSE", "ELEPHANT", "FISH", "RABBIT" };
-        //static string[] words = { "ARDA","BERKE", "EMRE", "FURKAN", "GOKSEL","ARKADASLAR","CATISIN"};
         static string[] placed = new string[words.Length];
 
         static void Main(string[] args)
